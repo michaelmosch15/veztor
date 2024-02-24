@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CircularProgressBar from '../components/CircularProgressBar';
+import ImgSrc from "../images/icon.png";
 import './styles.css'; 
 
 const IndexPage = () => {
@@ -11,7 +12,11 @@ const IndexPage = () => {
   return (
     <main>
     
-    <center><img src="./images/icon.png" className="icon.png" /></center>
+    <center><img src={ImgSrc} className="icon" />
+    <pg>
+    <h1>Veztor</h1>
+    </pg>
+    </center>
 
     <div className="center-container"> 
           <div classname="titlecontainer">
