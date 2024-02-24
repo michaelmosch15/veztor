@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InputPage = () => {
+const BusinessPage = () => {
   return (
     <div
       style={{
@@ -8,7 +8,6 @@ const InputPage = () => {
         backgroundColor: '#FFFFFF',
       }}
     >
-      <h2>Enter your details</h2>
       {[
         'Revenue',
         'Previous Revenue',
@@ -42,11 +41,11 @@ const InputPage = () => {
             name={item}
             style={{
               width: '100%',
-              padding: '10px',
+              padding: '2px',
               margin: '0 0 20px 0',
               border: 'none',
               borderRadius: '5px',
-              boxShadow: '0 0 0 1px #000', // This replaces border to achieve black box
+              boxShadow: '0 0 0 1px #000',
               backgroundColor: '#fff'
             }}
           />
@@ -60,12 +59,13 @@ const InputPage = () => {
           backgroundColor: '#63cc3a',
           color: '#fff',
           cursor: 'pointer',
+          border: '#000000',
         }}
       >
-        Submit
+        Input 
       </button>
     </div>
   );
 };
 
-export default InputPage;
+export default BusinessPage;

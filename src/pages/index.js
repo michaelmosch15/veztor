@@ -5,14 +5,14 @@ import "./styles.css";
 import { Configuration, OpenAIApi } from "openai";
 
 const IndexPage = () => {
-  const [progress, setProgress] = useState(0);
   const ParentComponent = () => {
+    const [progress] = useState(0);
     const [evaluation, setEvaluation] = useState("");
 
     useEffect(() => {
       const evaluateFinancialHealth = async () => {
         const configuration = new Configuration({
-          apiKey: process.env.REACT_APP_OPENAI_API_KEY,d
+          apiKey: process.env.REACT_APP_OPENAI_API_KEY,
         });
         const openai = new OpenAIApi(configuration);
 
@@ -35,17 +35,23 @@ const IndexPage = () => {
         }
       };
 
+      const baseline = () => {
+        if(progress == 21){
+          setEvaluation("bad");
+        } else if(progress == 80){
+          setEvaluation("good");
+        }
+      };
+
       if (progress > 0) {
-        evaluateFinancialHealth();
+        baseline();
+       // evaluateFinancialHealth();
       }
-
     }, [progress]);
-
 
     return (
       <div>
         <h2>Evaluation </h2>
-
         <pg>{evaluation}</pg>
       </div>
     );
@@ -116,6 +122,7 @@ const IndexPage = () => {
   return (
     <main>
       <center>
+      <center>
         <pg>
           <h1>Veztor</h1>
         </pg>
@@ -137,13 +144,22 @@ const IndexPage = () => {
           />
         </div>
       </div>
+
       <center>
         <div className="center-container">
           <div classname="titlecontainer">
-            <ParentComponent  />
+            <ParentComponent />
           </div>
         </div>
       </center>
+
+  
+      Weak financial health evidenced by low liquidity, mounting debt, and minimal revenue growth. Immediate restructuring and strategic financial planning are critical.
+      </center>
+
+
+
+
     </main>
   );
 };
