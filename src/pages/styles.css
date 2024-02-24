@@ -1,0 +1,32 @@
+body {
+  background-color: #ffffff; /* Background color */
+  margin: 0; /* Removes default body margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column; /* Organizes children elements in a column */
+  font-family: "ColfaxAI", Helvetica, sans-serif;
+
+}
+
+.icon {
+  width: 34px;
+}
+
+.title-container {
+  text-align: center; /* Centers text inside the container */
+  margin-bottom: 40px; /* Adds space between title and the circle box */
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-container {
+  padding: 40px; 
+  border-radius: 20%; /* Rounds corners to make it a circle */
+  display: inline-flex; /* Allows the container to shrink/grow with its content */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2 200px 100px rgba(0, 0, 0, 0.8); /* Soft shadow for a bit of depth */
+  background: #000000; /* Light background color */
+}

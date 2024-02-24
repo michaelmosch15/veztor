@@ -1,0 +1,15 @@
+
+
+.circular-progress-bar {
+  position: relative;
+}
+
+.progress-ring__circle {
+  animation: grow 6s ease-out forwards;
+}
+
+.progress-ring__circle--stopped {
+  animation: none;
+  stroke: #ffffff;
+}
+
