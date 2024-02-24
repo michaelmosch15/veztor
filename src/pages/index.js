@@ -12,7 +12,7 @@ const IndexPage = () => {
     useEffect(() => {
       const evaluateFinancialHealth = async () => {
         const configuration = new Configuration({
-          apiKey: process.env.REACT_APP_OPENAI_API_KEY,
+          apiKey: process.env.REACT_APP_OPENAI_API_KEY,d
         });
         const openai = new OpenAIApi(configuration);
 
@@ -38,7 +38,9 @@ const IndexPage = () => {
       if (progress > 0) {
         evaluateFinancialHealth();
       }
+
     }, [progress]);
+
 
     return (
       <div>
