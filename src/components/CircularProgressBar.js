@@ -56,8 +56,7 @@ const CircularProgressBar = ({
         fontSize="50" 
       >
 
-        47
-
+{progress}
         </text>
 
 

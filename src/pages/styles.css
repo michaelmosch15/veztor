@@ -15,14 +15,14 @@ body {
 }
 
 .title-container {
-  text-align: center; /* Centers text inside the container */
-  margin-bottom: 40px; /* Adds space between title and the circle box */
+  text-align: center; 
+  margin-bottom: 40px; 
   justify-content: center;
   align-items: center;
 }
 
 .circle-container {
-  padding: 20px; 
+  padding: 50px; 
   border-radius: 20%; /* Rounds corners to make it a circle */
   display: inline-flex; /* Allows the container to shrink/grow with its content */
   align-items: center;
