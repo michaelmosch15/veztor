@@ -5,8 +5,8 @@ import "./styles.css";
 import { Configuration, OpenAIApi } from "openai";
 
 const IndexPage = () => {
+  const [progress, setProgress] = useState(0);
   const ParentComponent = () => {
-    const [progress] = useState(0);
     const [evaluation, setEvaluation] = useState("");
 
     useEffect(() => {
@@ -43,6 +43,7 @@ const IndexPage = () => {
     return (
       <div>
         <h2>Evaluation </h2>
+
         <pg>{evaluation}</pg>
       </div>
     );
@@ -137,7 +138,7 @@ const IndexPage = () => {
       <center>
         <div className="center-container">
           <div classname="titlecontainer">
-            <ParentComponent />
+            <ParentComponent  />
           </div>
         </div>
       </center>
